@@ -196,3 +196,17 @@ tr:last-child td {
         overflow-x: auto;
     }
 }
+/* Responsive button styles */
+@media (max-width: 768px) {
+    .btn {
+        padding: 8px 16px; /* Reduce padding */
+        font-size: 0.9em; /* Slightly smaller text */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 6px 12px; /* Further reduce padding */
+        font-size: 0.8em; /* Smaller text for very small screens */
+    }
+}
