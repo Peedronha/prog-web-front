@@ -74,9 +74,13 @@
 
                 <label for="password">Senha:</label>
                 <input type="password" id="password" name="password" required><br><br>
+                <button class="btn btn-edit" type="button" onclick="togglePasswordVisibility('password', this)">Mostrar/Esconder</button><br><br>
+
 
                 <label for="confirmPassword">Confirmar Senha:</label>
                 <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+                <button class="btn btn-edit" type="button" onclick="togglePasswordVisibility('confirmPassword', this)">Mostrar/Esconder</button><br><br>
+
 
                 <button class="btn btn-edit" onclick="validatePasswords()" type="submit" id="submit-atividade">Salvar</button>
                 <button class="btn btn-delete" type="button" id="fechar-modal">Fechar</button>
@@ -94,6 +98,16 @@
             }
             alert('Senhas coincidem! Formulário pode ser enviado.');
             return true;
+        }
+        function togglePasswordVisibility(inputId, button) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
+                button.textContent = 'Esconder';
+            } else {
+                input.type = 'password';
+                button.textContent = 'Mostrar';
+            }
         }
     </script>
 
