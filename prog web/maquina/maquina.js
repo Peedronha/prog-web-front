@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para editar atividade
     // Tem que montar a integração com o back
     window.editarAtividade = (id, nome, marca, grupo) => {
-        document.querySelector('#modal-titulo').textContent = 'Editar Atividade';
+        document.querySelector('#modal-titulo').textContent = 'Editar Máquina';
         document.querySelector('#id-atividade').value = id;
         document.querySelector('#nome').value = nome;
         document.querySelector('#marca').value = marca;
